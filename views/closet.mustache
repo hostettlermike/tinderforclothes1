@@ -1,0 +1,66 @@
+<div class="headerprint">
+{{> header}}
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1>Mein Kleiderschrank <br> <button id="button" class="btn">Drucken  <i class="fa fa-print"></i></button>
+</h1> 
+
+
+<br>
+
+
+<div class="posts">
+  {{#likes}}
+    <div class="likeitem">
+      <h3>{{titel}}</h3>
+      <img src="/clothes/{{bild}}.png" alt="closetimg" class="closetimg">
+      <h4>{{inhalt}}</h4>
+         <form action="/delete/{{id}}" method="POST">
+        <input type="image" src="/images/dislike.png" class="delete">
+      </form>
+    </div>
+  {{/likes}}
+</div>
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	document.querySelector("button")
+		.addEventListener("click", function () {
+			window.print();
+		});
+});
+
+</script>
+
+<style>
+.btn {
+  background-color: #b79ced; 
+  border: none; 
+  color: white; 
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer; 
+}
+
+.btn:hover {
+  background-color: 
+}
+
+@media print{
+button{
+    visibility: hidden;
+  }
+  .headerprint{
+    visibility: hidden;
+  }
+  h1{
+    margin-top: -49px;
+  }
+
+}
+</style>

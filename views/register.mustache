@@ -1,0 +1,29 @@
+ <link rel="stylesheet" href="./style.css">
+
+<div class="logoreglogdiv">
+<a href="/"><img class="logoreglog" src="images/logo.png" alt="logo"></a>
+</div>
+
+<h1>Registrieren</h1>
+<div class="loginform">
+<form action="/register" enctype="multipart/form-data" method="post">
+<input type="text" name="email" placeholder="Benutzername" class="usernamelogin">
+<input type="password" name="passwort" placeholder="Passwort" class="passwordregister">
+<p>Profilbild:</p>
+<input type="file" name="profilepic">
+  <br> <br> <br>
+  <input type="submit" value="Registrieren" class="register_on_regsite">
+</form>
+<a href="/login"><button class="login_on_regsite">Anmelden</button></a>
+</div>
+
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<p>Du hast dich erfolgreich Registriert! <br> <a href="/login">Anmelden</a> </p>
+		</div>
+	</div>
+</div>
+
+

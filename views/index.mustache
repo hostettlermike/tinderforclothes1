@@ -1,0 +1,35 @@
+{{> header}}
+
+<h1>Wähle deine Favoriten!</h1> 
+ 
+
+
+
+
+
+<div class="posts">
+  {{#posts}}
+    <div class="item">
+      <h3>{{titel}}</h3>
+    
+      <img src="/clothes/{{bild}}.png" alt="closetimg" class="closetimg">
+      <h4>{{inhalt}}</h4>
+      <h4>{{preis}} CHF</h4>
+      <form action="/like/{{id}}" method="POST">
+        <input type="image" src="/images/like.png" class="like">
+      </form>
+    </div>
+  {{/posts}}
+  
+</div>
+
+
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<p>Kleidungsstück wurde deinem <a href="/closet">Kleiderschrank</a> hinzugefügt!</p>
+		</div>
+	</div>
+</div>
